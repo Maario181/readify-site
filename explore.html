@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify | Book Explorer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html" aria-label="Readify Home">
+                <img src="assets/images/logo.png" alt="Readify logo" class="logo-img">
+            </a>
+
+
+            <button class="hamburger" aria-label="Menu">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="recommend.html">Recommend</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+    <section class="page-header">
+        <h1>Book Explorer</h1>
+        <p class="muted">Browse books, search by title/author, and filter by genre.</p>
+    </section>
+
+    <section class="controls">
+        <h2 class="visually-hidden">Search and Filters</h2>
+        <input id="searchInput" type="text" placeholder="Search by title or author..." aria-label="Search books">
+        <select id="genreFilter" aria-label="Filter by genre">
+        <option value="all">All Genres</option>
+        </select>
+    </section>
+
+    <section id="bookGrid" class="grid">
+        <h2 class="visually-hidden">Book Results</h2>
+        <!-- Cards injected by JS -->
+    </section>
+
+    <!-- Modal -->
+    <div id="bookModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
+
+        <h2 id="modalTitle">Title</h2>
+        <p id="modalSynopsis" class="muted">Synopsis...</p>
+
+        <h3>Prequels / Sequels</h3>
+        <ul id="modalSeries"></ul>
+
+        <h3>Ratings & Reviews</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Source</th>
+                <th>Rating</th>
+                <th>Comment</th>
+            </tr>
+            </thead>
+            <tbody id="modalRatings"></tbody>
+        </table>
+        </div>
+    </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Readify</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

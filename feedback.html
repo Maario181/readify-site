@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify | Feedback</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html" aria-label="Readify Home">
+                <img src="assets/images/logo.png" alt="Readify logo" class="logo-img">
+            </a>
+
+
+            <button class="hamburger" aria-label="Menu">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="recommend.html">Recommend</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+    <section class="page-header">
+        <h1>Feedback</h1>
+        <p class="muted">Send feedback and check the FAQs.</p>
+    </section>
+
+    <section class="feedback-grid">
+        <div class="feedback-card">
+        <h2>Feedback Form</h2>
+
+        <form id="feedbackForm">
+            <label>
+            Name
+            <input type="text" id="fbName" required>
+            </label>
+
+            <label>
+            Email
+            <input type="email" id="fbEmail" required>
+            </label>
+
+            <label>
+            Message
+            <textarea id="fbMessage" rows="5" required></textarea>
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="fbStatus" class="muted" style="display:none;"></p>
+        </div>
+
+        <div class="feedback-card">
+        <h2>FAQs</h2>
+
+        <div class="faq">
+            <button class="faq-q" type="button">How does Readify store my data?</button>
+            <div class="faq-a">
+            <p class="muted">Your reading list and progress are saved locally in your browser using localStorage.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="faq-q" type="button">Does this website need an account?</button>
+            <div class="faq-a">
+            <p class="muted">No account is required. This is a lightweight client-side application.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="faq-q" type="button">Can I clear my saved data?</button>
+            <div class="faq-a">
+            <p class="muted">Yes. You can clear browser storage or use the “Clear Completed” option on Reading Flow.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Readify</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify | Reading Flow</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html" aria-label="Readify Home">
+                <img src="assets/images/logo.png" alt="Readify logo" class="logo-img">
+            </a>
+
+
+            <button class="hamburger" aria-label="Menu">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="recommend.html">Recommend</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+    <section class="page-header">
+        <h1>Reading Flow</h1>
+        <p class="muted">Your saved reading list and completed books, stored on your device.</p>
+    </section>
+
+    <section class="sound-card">
+        <h2>Cozy Sounds</h2>
+        <p class="muted">Optional ambience while you browse your reading flow.</p>
+
+        <div class="sound-buttons">
+            <button type="button" id="playCozy">Play</button>
+            <button type="button" id="stopCozy" disabled>Stop</button>
+        </div>
+
+        <audio id="cozyAudio" loop preload="auto">
+            <source src="assets/sounds/light-rain.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+
+    <section class="flow-grid">
+        <div class="flow-card">
+        <h2>Reading List</h2>
+        <p class="muted">Books saved from the Recommender.</p>
+
+        <ul id="readingList" class="flow-list"></ul>
+        <p id="emptyReading" class="muted">No books saved yet.</p>
+        </div>
+
+        <div class="flow-card">
+        <h2>Completed</h2>
+        <p class="muted">Mark books as completed to track your progress.</p>
+
+        <ul id="completedList" class="flow-list"></ul>
+        <p id="emptyCompleted" class="muted">No completed books yet.</p>
+
+        <button id="clearCompleted" type="button" class="danger-btn">Clear Completed</button>
+        </div>
+    </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Readify</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

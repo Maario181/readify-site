@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readify | Reading Progress Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html" aria-label="Readify Home">
+                <img src="assets/images/logo.png" alt="Readify logo" class="logo-img">
+            </a>
+
+
+            <button class="hamburger" aria-label="Menu">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="recommend.html">Recommend</a></li>
+                <li><a href="flow.html">Reading Flow</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+    <section class="page-header">
+        <h1>Reading Progress</h1>
+        <p class="muted">Track how far you’ve gone in your current book.</p>
+    </section>
+
+    <section class="progress-card">
+        <h2 class="visually-hidden">Reading Progress</h2>
+        <form id="progress-form">
+        <label>
+            Book title
+            <input type="text" id="book-title" placeholder="Enter book title" required>
+        </label>
+
+        <label>
+            Total pages
+            <input type="number" id="total-pages" min="1" required>
+        </label>
+
+        <label>
+            Pages read
+            <input type="number" id="pages-read" min="0" required>
+        </label>
+
+        <button type="submit">Save Progress</button>
+        </form>
+
+        <div class="progress-output">
+        <p id="progress-text">No progress saved yet.</p>
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+        </div>
+    </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Readify</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
